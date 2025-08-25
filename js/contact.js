@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (!message.value.trim()) {
             messageError.textContent = 'This field is required';
             errorInputs();
-        } else if(!isValidReason.value.trim()) {
+        } else if(!isValidMessage.value.trim()) {
             messageError.textContent = 'Invalid message';
             errorInputs();
         } else {
@@ -102,14 +102,5 @@ window.addEventListener('DOMContentLoaded', () => {
         const messageRegex = /^[\s\S]{10,}$/;
         return messageRegex.test(msg);
     };
-
-    /* Configuración base */
-    window.sr = ScrollReveal({
-        reset: true,  
-        distance: "60px",
-        duration: 1200,
-        easing: "ease-in-out",
-        opacity: 0
-    });
 
 });
