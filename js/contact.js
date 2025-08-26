@@ -114,43 +114,37 @@ window.addEventListener('DOMContentLoaded', () => {
   // Configuración base
   const sr = ScrollReveal({
     reset: false,
-    distance: '0px',       // no se desplaza
-    duration: 1000,        // tiempo suave
-    easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)', // ease más natural
-    scale: 0.9,            // aparece con zoom-in sutil
-    rotate: { x: 6, y: -6, z: 0 }, // giro 3D sutil
+    distance: '0px',       
+    duration: 1000,        
+    easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)', 
+    scale: 0.9,          
+    rotate: { x: 6, y: -6, z: 0 },
     opacity: 0,
     mobile: true,
     viewFactor: 0.1
   });
-
-  // ✅ Logo Header (siempre visible, solo animación 3D sin ocultarse)
   sr.reveal('.header .logo svg', {
-    opacity: 1,  // 👈 siempre visible
+    opacity: 1, 
     scale: 0.95,
     rotate: { x: 4, y: -4, z: 0 },
     delay: 80
   });
 
-  // ✅ Nav del Header
   sr.reveal('header nav ul li', {
     interval: 0,
     delay: 80
   });
 
-  // ✅ Fondo (video)
   sr.reveal('.background-video', {
     scale: 1.02,
     opacity: 0.8,
     duration: 1200
   });
 
-  // ✅ Contenido principal
   sr.reveal('.main', {
     delay: 100
   });
 
-  // ✅ Logo Footer (siempre visible igual que el del header)
   sr.reveal('footer .description-footer .logo svg', {
     opacity: 1, // 👈 no se oculta
     scale: 0.95,
@@ -158,7 +152,6 @@ window.addEventListener('DOMContentLoaded', () => {
     delay: 120
   });
 
-  // ✅ Resto del footer
   sr.reveal(`
     footer .description-footer .social-link,
     footer .copy p,

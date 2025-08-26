@@ -3,7 +3,6 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    /* Configuración base */
     window.sr = ScrollReveal({
         reset: true,  
         distance: "60px",
@@ -12,9 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
         opacity: 0
     });
 
-    /* ==============================
-       Animaciones 1 - HEADER + START ⭐
-    ===============================*/
     sr.reveal('.logo', {
         origin: "top",
         rotate: { x: 20, y: 0, z: -10 },
@@ -44,9 +40,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    /* ==============================
-       Animaciones 2 - BRANDS + LIFE ⭐
-    ===============================*/
     sr.reveal('.title-brands h1', {
         origin: "top",
         distance: "80px",
@@ -100,10 +93,6 @@ window.addEventListener('DOMContentLoaded', () => {
         easing: "ease-out"
     });
 
-
-    /* ==============================
-       Animaciones 3D Avanzadas - STATE ⭐
-    ===============================*/
     sr.reveal('.title-state h2', {
         interval: 200,
         origin: "bottom",
@@ -118,10 +107,6 @@ window.addEventListener('DOMContentLoaded', () => {
         scale: 0.85,
     });
 
-
-    /* ==============================
-       SUSTAINABILITY ⭐
-    ===============================*/
     sr.reveal('.title-tecnology h2', {
         origin: "left",
         rotate: { x: 0, y: -45, z: 0 },
@@ -136,9 +121,6 @@ window.addEventListener('DOMContentLoaded', () => {
         scale: 0.9,
     });
 
-    /* ==============================
-       MAKE YOUR MARK ⭐
-    ===============================*/
     sr.reveal('.title-make h2:nth-child(1)', {
         origin: "top",
         rotate: { x: 0, y: -50, z: 0 },
@@ -159,9 +141,6 @@ window.addEventListener('DOMContentLoaded', () => {
         scale: 0.8,
     });
 
-    /* ==============================
-       PICTURE ⭐
-    ===============================*/
     sr.reveal('.container-picture h2', {
         origin: "left",
         rotate: { x: -30, y: 0, z: 0 },
@@ -205,7 +184,6 @@ window.addEventListener('DOMContentLoaded', () => {
         scale: 0.85,
     });
 
- // Configuración general de ScrollReveal
   window.sr = window.sr || ScrollReveal({
     reset: false,
     distance: "60px",
@@ -218,7 +196,7 @@ window.addEventListener('DOMContentLoaded', () => {
   sr.reveal(".header", { origin: "top" });
   sr.reveal(".main", { origin: "bottom", interval: 100 });
 
-  const contactLink = document.querySelector(".js-contact"); // <-- solo una vez
+  const contactLink = document.querySelector(".js-contact");
   const overlay = document.querySelector(".page-transition");
 
   if (contactLink && overlay) {
