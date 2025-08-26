@@ -205,4 +205,42 @@ window.addEventListener('DOMContentLoaded', () => {
         scale: 0.85,
     });
 
+ // Configuración general de ScrollReveal
+  window.sr = window.sr || ScrollReveal({
+    reset: false,
+    distance: "60px",
+    duration: 9000,
+    easing: "ease-in-out",
+    opacity: 0,
+    scale: 1
+  });
+
+  sr.reveal(".header", { origin: "top" });
+  sr.reveal(".main", { origin: "bottom", interval: 100 });
+
+  const contactLink = document.querySelector(".js-contact"); // <-- solo una vez
+  const overlay = document.querySelector(".page-transition");
+
+  if (contactLink && overlay) {
+    contactLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      overlay.style.opacity = "1";
+
+      ScrollReveal().reveal(".page-transition", {
+        duration: 700,
+        distance: "100%",
+        origin: "left",
+        opacity: 1,
+        easing: "ease-in-out",
+        beforeReveal(domEl) {
+          domEl.style.filter = "blur(100px)";
+        },
+        afterReveal() {
+          window.location.href = "contact.html";
+        }
+      });
+    });
+  }
+
 });

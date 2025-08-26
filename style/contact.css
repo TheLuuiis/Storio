@@ -282,7 +282,7 @@ body {
 }
 
 .errorMessage {
-        position: absolute;
+    position: absolute;
     left: 2px;
     bottom: -120px;
 }
